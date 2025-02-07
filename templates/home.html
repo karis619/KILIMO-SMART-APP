@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilimo Smart - Home</title>
+    <style>
+        /* Setting a background image for the page */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('C:/Users/HP/OneDrive/Desktop/python_project/kilimo_smart_app/background.jpg'); /* Replace with your image file */
+            background-size: cover; /* Ensures the image covers the entire screen */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents tiling of the image */
+            font-family: Arial, sans-serif;
+            color: #104e25;
+        }
+
+        /* Adding a transparent overlay to improve text visibility */
+        .overlay {
+            background-color: rgba(32, 146, 47, 0.5); /* Black overlay with transparency */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Styling the main heading */
+        h1 {
+            color: #259948;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(48, 167, 58, 0.7);
+            margin-bottom: 20px;
+        }
+
+        /* Styling the mission and aim sections */
+        .content {
+            background-color: rgba(51, 85, 64, 0.1); /* Light overlay background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(47, 129, 65, 0.2);
+            max-width: 800px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin: 10px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        /* Styling buttons */
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #111010;
+            background-color: #207727; /* Blue button */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05); /* Slight scaling effect */
+        }
+
+        .button:active {
+            transform: scale(1.02); /* Subtle effect on click */
+        }
+    </style>
+</head>
+<body>
+    <!-- Overlay for text -->
+    <div class="overlay">
+        <h1>Welcome to Kilimo Smart</h1>
+        <div class="content">
+            <h2>Our Mission</h2>
+            <p>
+                To revolutionize agriculture by providing farmers with innovative tools and resources, 
+                empowering them to make data-driven decisions for improved productivity and sustainability.
+            </p>
+
+            <h2>Our Aim</h2>
+            <p>
+                Kilimo Smart aims to bridge the gap between technology and agriculture by offering services such as soil mapping, crop recommendations, 
+                disease diagnosis, and an online marketplace for farmers to connect and thrive.
+            </p>
+        </div>
+
+        <!-- Buttons for Sign Up and Log In -->
+        <div class="button-container">
+            <a href="{{ url_for('signup') }}" class="button">Sign Up</a>
+            <a href="{{ url_for('login') }}" class="button">Log In</a>
+        </div>
+    </div>
+</body>
+</html>

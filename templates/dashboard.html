@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background: url('/static/images/background.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .content-container {
+        background: rgba(52, 133, 45, 0.8); /* Greenish transparent background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .card {
+        background: #ffffff;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .btn-primary {
+        background-color: #34852d;
+        border-color: #34852d;
+    }
+    .btn-primary:hover {
+        background-color: #2a6a23;
+        border-color: #2a6a23;
+    }
+</style>
+
+<div class="container mt-5 content-container">
+    <h1 class="text-center text-white">Welcome, {{ username }}!</h1>
+    <p class="text-center text-white">Explore the amazing features of Kilimo Smart tailored for your farming needs.</p>
+    <div class="row">
+        <!-- Feature Cards -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Soil Mapping by Region</h5>
+                    <p class="card-text">Explore soil types and characteristics in different regions.</p>
+                    <a href="{{ url_for('soil_mapping') }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Multi-Language Support</h5>
+                    <p class="card-text">Access the platform in multiple languages for better understanding.</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Voice Interface for Non-Readers/Writers</h5>
+                    <p class="card-text">Use voice commands to interact with the platform.</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Regional Climate Patterns with Crop Recommendations</h5>
+                    <p class="card-text">Get crop recommendations based on regional climate patterns.</p>
+                    <a href="{{ url_for('climate_patterns') }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Land Leasing/Renting Options</h5>
+                    <p class="card-text">Find and lease/rent land for farming.</p>
+                    <a href="{{ url_for('land_leasing') }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">AI-Powered Crop Disease Identification</h5>
+                    <p class="card-text">Identify crop diseases using AI-powered tools.</p>
+                    <a href="{{ url_for('crop_disease') }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Buy/Sell Marketplace</h5>
+                    <p class="card-text">Buy and sell farming products in the marketplace.</p>
+                    <a href="{{ url_for('marketplace') }}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

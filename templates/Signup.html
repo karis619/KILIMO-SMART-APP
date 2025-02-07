@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Kilimo Smart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .signup-form-container {
+            margin-top: 100px;
+        }
+        .signup-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container signup-form-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="signup-form">
+                    <h3 class="text-center mb-4">Create an Account</h3>
+                    <form action="/signup" method="POST">
+                        <!-- Username Field -->
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+
+                        <!-- Gender Field -->
+                        <div class="mb-3">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select class="form-control" id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                
+                            </select>
+                        </div>
+
+                        <!-- Location Field -->
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="location" name="location" required>
+                        </div>
+
+                        <!-- Farming Type Field -->
+                        <div class="mb-3">
+                            <label for="farming_type" class="form-label">Farming Type</label>
+                            <select class="form-control" id="farming_type" name="farming_type" required>
+                                <option value="">Select Farming Type</option>
+                                <option value="Crop Farming">Crop Farming</option>
+                                <option value="Livestock Farming">Livestock Farming</option>
+                                <option value="Mixed Farming">Mixed Farming</option>
+                            </select>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="mb-3 text-center">
+                            <button type="submit" class="btn btn-custom w-100">Sign Up</button>
+                        </div>
+
+                        <!-- Login Link -->
+                        <p class="text-center">Already have an account? <a href="/login">Login here</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
